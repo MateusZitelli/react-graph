@@ -1,0 +1,6 @@
+example.css
+example.js
+example.js.map
+dist/
+node_modules/
+npm-debug.log
