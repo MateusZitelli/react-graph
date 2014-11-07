@@ -18,11 +18,19 @@
     "dev": "webpack -d --watch --colors",
     "build": "NODE_ENV=production webpack -d"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MateusZitlli/react-graph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MateusZitlli/react-graph/issues"
+  },
+  "homepage": "https://github.com/MateusZitlli/react-graph",
   "keywords": [
     "react-component",
     "graph",
     "network"
   ],
-  "author": "Mateus Zitelli",
+  "author": "Mateus Zitelli <zitellimateus at gmail.com>",
   "license": "MIT"
 }
