@@ -46,6 +46,7 @@ var Graph = React.createClass({
     this.state.nodes.forEach((n) => forceNodes.push(n));
     this.state.links.forEach((l) => forceLinks.push(l));
 
+    force.start();
 
     force.on('tick', () => {
       this.setState({
@@ -53,8 +54,6 @@ var Graph = React.createClass({
         links: forceLinks
       });
     });
-
-    force.start();
   },
 
   render() {

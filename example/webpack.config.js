@@ -7,12 +7,7 @@ module.exports = {
     filename: 'example.js',
   },
   externals:{
-    React: {
-      root: 'React',
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'react'
-    }
+    react: "React"
   },
   module: {
     loaders: [

@@ -12,18 +12,13 @@ var webpackConfig = module.exports = {
     libraryTarget: 'umd'
   },
   externals: {
-    React: {
+    react: {
       root: 'React',
       commonjs: 'react',
       commonjs2: 'react',
       amd: 'react'
     },
-    d3: {
-      root: 'd3',
-      commonjs: 'd3',
-      commonjs2: 'd3',
-      amd: 'd3'
-    }
+    d3: "d3" 
   },
   module: {
     loaders: [
