@@ -2,7 +2,7 @@
  * @jsx React.DOM
  */
 
-var React = require('React');
+var React = require('react');
 var d3 = require('d3');
 var assign = require('object-assign');
 
@@ -16,7 +16,10 @@ var Graph = React.createClass({
     network: React.PropTypes.object.isRequired,
     linkSize: React.PropTypes.number,
     charge: React.PropTypes.number,
-    nodeRadius: React.PropTypes.number
+    nodeRadius: React.PropTypes.number,
+    onClickNode: React.PropTypes.func,
+    onMouseLeaveNode: React.PropTypes.func,
+    onMouseEnterNode: React.PropTypes.func
   },
 
   getDefaultProps() {
@@ -34,7 +37,7 @@ var Graph = React.createClass({
     };
   },
 
-  componentDidMount() {
+  componentWillMount() {
     var force = d3.layout.force()
       .charge(this.props.charge) 
       .linkDistance(this.props.linkDistance)
@@ -63,6 +66,9 @@ var Graph = React.createClass({
         r={this.props.nodeRadius}
         cx={this.state.nodes[key].x}
         cy={this.state.nodes[key].y}
+        onClick={this.props.onClickNode}
+        onMouseEnter={this.props.onMouseEnterNode}
+        onMouseLeave={this.props.onMouseLeaveNode}
         node={this.state.nodes[key]}/>);
 
     var linksElements = this.state.links.map((link, i) => {
