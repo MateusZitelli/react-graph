@@ -22,12 +22,12 @@ var Node = React.createClass({
 
   _handleOnClick(e) {
     if(!!this.props.onClick){
-      this.props.onClick.call(this.props.node, e);
+      this.props.onClick.call(null, e, this.props.node);
     }
   },
 
   _handleEnter(e){
-    this.props.onMouseEnter.call(this.props.node, e);
+    this.props.onMouseEnter.call(null, e, this.props.node);
 
     this.setState({
       hover: true
@@ -35,7 +35,7 @@ var Node = React.createClass({
   },
 
   _handleLeave(e){
-    this.props.onMouseLeave.call(this.props.node, e);
+    this.props.onMouseLeave.call(null, e, this.props.node);
 
     this.setState({
       hover: false

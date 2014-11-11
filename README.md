@@ -1,7 +1,7 @@
 #React-Graph
 > A React.js component to render a svg graph
 
-![React-Graph](http://i.imgur.com/EkjljAw.png)
+![React-Graph](http://i.imgur.com/NJGbvBH.png)
 ##Instructions
 To build for production usage:
 ```sh
